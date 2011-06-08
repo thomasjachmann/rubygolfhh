@@ -1,9 +1,9 @@
 class Golf
   def self.hole4 a
-    a.map do |x|
+    a.map {|x|
       i = x[0]
       i == 109 ? "hat(#{x})" : i == 100 ? x.chop + "(bone))" : 'dead(' + x.split('(')[1]
-    end
+    }
   end
 
   def self.hole1(a)
@@ -15,19 +15,9 @@ class Golf
   end
 
   def self.hole6 a
-    (1..a).map do |x|
-      if x % 5 == 0
-        if x % 3 == 0
-          "fizzbuzz"
-        else
-          "buzz"
-        end
-      elsif (x % 3 == 0)
-        "fizz"
-      else 
-        x
-      end
-    end
+    (1..a).map {|x|
+      x % 5 == 0 ? (x % 3 == 0 ? "fizzbuzz" : "buzz") : x % 3 == 0 ? "fizz" : x
+    }
   end
   
   def self.hole3(s)
