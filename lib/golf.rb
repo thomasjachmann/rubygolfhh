@@ -46,5 +46,9 @@ class Golf
     b = s[(l/2)..-1]
     a == b.reverse
   end
+  
+  def self.hole5(a)
+    (1..(a.length)).map {|i| a.each_cons(i).sort_by {|j| j[0]}}.flatten 1
+  end
 
 end
