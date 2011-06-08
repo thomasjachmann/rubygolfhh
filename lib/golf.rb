@@ -22,18 +22,16 @@ class Golf
 
   def self.hole7 a 
     r = []
-    lis = a[0]
-    last = a[0]
-    a.each do |x|
-      if x > last + 1
-        r << "#{lis}" + (last != lis ? "-#{last}" : '')
-        lis = x
+    l = a[0]
+    m = a[0]
+    a.each {|x|
+      if x > m + 1
+        r << "#{l}" + (m != l ? "-#{m}" : '')
+        l = x
       end
-      last = x
-    end
-    if last == a.last
-        r << "#{lis}-#{last}"
-    end
+      m = x
+    }
+    r << "#{l}-#{m}" if m == a.last
     r
   end
   
