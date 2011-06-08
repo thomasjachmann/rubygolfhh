@@ -16,8 +16,10 @@ class Golf
     end
 
     def hole6 a
+      f = "fizz"
+      b = "buzz"
       (1..a).map {|x|
-        x % 5 == 0 ? x % 3 == 0 ? "fizzbuzz" : "buzz" : x % 3 == 0 ? "fizz" : x
+        x % 5 == 0 ? x % 3 == 0 ? f + b : b : x % 3 == 0 ? f : x
       }
     end
 
@@ -27,7 +29,7 @@ class Golf
       m = a[0]
       a.each {|x|
         if x > m + 1
-          r << "#{l}" + (m != l ? "-#{m}" : '')
+          r << "#{l}#{m != l ? "-#{m}" : ''}"
           l = x
         end
         m = x
