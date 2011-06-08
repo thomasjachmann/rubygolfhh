@@ -33,7 +33,7 @@ class Golf
         end
         m = x
       }
-      r << "#{l}-#{m}" if m == a.last
+      r << "#{l}-#{m}" if m == a[-1]
       r
     end
 
