@@ -6,11 +6,11 @@ class Golf
     }
   end
 
-  def self.hole1(a)
+  def self.hole1 a 
     a.inject(1) {|i,m| i * m}
   end
   
-  def self.hole2(a)
+  def self.hole2 a 
     (a[0]..a[1]).collect {|i| i if hole3(i.to_s)}.compact
   end
 
@@ -35,7 +35,7 @@ class Golf
     r
   end
   
-  def self.hole3(s)
+  def self.hole3 s 
     s.downcase!
     l = s.length
     a = l/2
@@ -45,11 +45,11 @@ class Golf
     a == b.reverse
   end
   
-  def self.hole5(a)
+  def self.hole5 a 
     (1..(a.length)).map {|i| a.each_cons(i).sort_by {|j| j[0]}}.flatten 1
   end
   
-  def self.hole8(i)
+  def self.hole8 i 
     (i-2).times.inject([1, 1]) {|m, x| m << m[-1] + m[-2]}
   end
 
