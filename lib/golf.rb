@@ -16,7 +16,7 @@ class Golf
 
   def self.hole6 a
     (1..a).map {|x|
-      x % 5 == 0 ? (x % 3 == 0 ? "fizzbuzz" : "buzz") : x % 3 == 0 ? "fizz" : x
+      x % 5 == 0 ? x % 3 == 0 ? "fizzbuzz" : "buzz" : x % 3 == 0 ? "fizz" : x
     }
   end
   
