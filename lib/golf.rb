@@ -12,7 +12,7 @@ class Golf
     end
 
     def hole2 a
-      (a[0]..a[1]).collect {|i| i if hole3(i.to_s)}.compact
+      (a[0]..a[1]).collect {|i| i if hole3 i.to_s}.compact
     end
 
     def hole6 a
@@ -46,7 +46,7 @@ class Golf
     end
 
     def hole5 a
-      (1..(a.length)).map {|i| a.each_cons(i).sort_by {|j| j[0]}}.flatten 1
+      (1..a.length).map {|i| a.each_cons(i).sort_by {|j| j[0]}}.flatten 1
     end
 
     def hole8 i
