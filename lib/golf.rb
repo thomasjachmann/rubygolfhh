@@ -1,16 +1,9 @@
 class Golf
   def self.hole4 a
     a.map do |x|
-      case x[0]
-        when 109 then
-          "hat(#{x})"  
-        when 100 then
-          x.chop + "(bone))"
-        else
-          'dead(' + x.split('(')[1]
-      end
+      i = x[0]
+      i == 109 ? "hat(#{x})" : i == 100 ? x.chop + "(bone))" : 'dead(' + x.split('(')[1]
     end
-    
   end
 
   def self.hole1(a)
