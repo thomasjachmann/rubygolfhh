@@ -25,8 +25,7 @@ class Golf
 
     def hole7 a
       r = []
-      l = a[0]
-      m = a[0]
+      l = m = a[0]
       a.each {|x|
         if x > m + 1
           r << "#{l}#{m != l ? "-#{m}" : ''}"
