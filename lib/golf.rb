@@ -28,17 +28,17 @@ class Golf
       l = m = a[0]
       a.each {|x|
         if x > m + 1
-          r << (j l,m)
+          j r,l,m
           l = x
         end
         m = x
       }
-      r << (j l,m)
-      r
+      j r,l,m
+      
     end
 
-    def j l,m
-          "#{l}#{m != l ? "-#{m}" : ''}"
+    def j r,l,m
+          r << "#{l}#{m != l ? "-#{m}" : ''}"
     end
 
     def hole3 s
