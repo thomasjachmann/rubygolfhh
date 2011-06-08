@@ -41,13 +41,8 @@ class Golf
     end
 
     def hole3 s
-      s.downcase!
-      l = s.length
-      a = l/2
-      a -= 1 if l % 2 == 0
-      a = s[0..(a)]
-      b = s[(l/2)..-1]
-      a == b.reverse
+      s.downcase! 
+      s.reverse == s
     end
 
     def hole5 a
