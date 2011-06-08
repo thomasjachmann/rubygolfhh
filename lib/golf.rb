@@ -8,7 +8,7 @@ class Golf
     end
 
     def hole1 a
-      a.inject(1) {|i,m| i * m}
+      a.inject :*
     end
 
     def hole2 a
@@ -34,7 +34,6 @@ class Golf
         m = x
       }
       j r,l,m
-      
     end
 
     def j r,l,m
