@@ -4,6 +4,10 @@ class Golf
     a.inject(1) {|i,m| i * m}
   end
   
+  def self.hole2(a)
+    (a[0]..a[1]).collect {|i| i if hole3(i.to_s)}.compact
+  end
+  
   def self.hole3(s)
     s.downcase!
     l = s.length
