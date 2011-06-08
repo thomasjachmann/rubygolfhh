@@ -20,6 +20,22 @@ class Golf
   def self.hole2(a)
     (a[0]..a[1]).collect {|i| i if hole3(i.to_s)}.compact
   end
+
+  def self.hole6 a
+    (1..a).map do |x|
+      if x % 5 == 0
+        if x % 3 == 0
+          "fizzbuzz"
+        else
+          "buzz"
+        end
+      elsif (x % 3 == 0)
+        "fizz"
+      else 
+        x
+      end
+    end
+  end
   
   def self.hole3(s)
     s.downcase!
