@@ -1,4 +1,17 @@
 class Golf
+  def self.hole4 a
+    a.map do |x|
+      case x[0]
+        when 109 then
+          "hat(#{x})"  
+        when 100 then
+          x.chop + "(bone))"
+        else
+          'dead(' + x.split('(')[1]
+      end
+    end
+    
+  end
 
   def self.hole1(a)
     a.inject(1) {|i,m| i * m}
